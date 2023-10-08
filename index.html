@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>IF,ELSE, AND NESTED IF</h1>
+      <script>
+        function tentukanJadwalBelajar(hari) {
+          var jadwal = "";
+
+          if (hari === "Senin" || hari === "Rabu") {
+            jadwal = "Matematika";
+          } else if (hari === "Selasa") {
+            jadwal = "Bahasa Inggris";
+          } else if (hari === "Kamis") {
+            jadwal = "Sains";
+          } else if (hari === "Jumat") {
+            jadwal = "Sejarah";
+          } else if (hari === "Sabtu" || hari === "Minggu") {
+            jadwal = "Libur";
+          } else {
+            jadwal = "Hari tidak valid";
+          }
+
+          return jadwal;
+        }
+
+        // Meminta input dari pengguna
+        var hariIni = prompt("Masukkan hari ini:"); // Contoh input: Senin
+
+        // Memanggil fungsi dan menampilkan hasilnya
+        var jadwalBelajar = tentukanJadwalBelajar(hariIni);
+        console.log("Jadwal belajar hari ini: " + jadwalBelajar);
+      </script>
+    </div>
+
+    <div>
+      <h1>SWITCH CASE</h1>
+      <script>
+        // Fungsi untuk menentukan jadwal belajar berdasarkan hari
+        function tentukanJadwalBelajar(hari) {
+          var jadwal = "";
+
+          switch (hari) {
+            case "Senin":
+            case "Rabu":
+              jadwal = "Matematika";
+              break;
+            case "Selasa":
+              jadwal = "Bahasa Inggris";
+              break;
+            case "Kamis":
+              jadwal = "Sains";
+              break;
+            case "Jumat":
+              jadwal = "Sejarah";
+              break;
+            case "Sabtu":
+            case "Minggu":
+              jadwal = "Libur";
+              break;
+            default:
+              jadwal = "Hari tidak valid";
+          }
+
+          return jadwal;
+        }
+
+        // Meminta input dari pengguna
+        var hariIni = prompt("Masukkan hari ini:"); // Contoh input: Senin
+
+        // Memanggil fungsi dan menampilkan hasilnya
+        var jadwalBelajar = tentukanJadwalBelajar(hariIni);
+        console.log("Jadwal belajar hari ini: " + jadwalBelajar);
+      </script>
+    </div>
+    <div>
+        <h2>FOR STATEMENT</h2>
+        <script>
+         function tentukanJadwalBelajar(hari) {
+            var jadwal = "";
+
+            switch (hari) {
+                case "Senin":
+                case "Rabu":
+                    jadwal = "Matematika";
+                    break;
+                case "Selasa":
+                    jadwal = "Bahasa Inggris";
+                    break;
+                case "Kamis":
+                    jadwal = "Sains";
+                    break;
+                case "Jumat":
+                    jadwal = "Sejarah";
+                    break;
+                case "Sabtu":
+                case "Minggu":
+                    jadwal = "Libur";
+                    break;
+                default:
+                    jadwal = "Hari tidak valid";
+            }
+
+            return jadwal;
+        }
+
+        // Fungsi untuk menampilkan jadwal belajar di halaman HTML
+        function tampilkanJadwalBelajar() {
+            var inputHari = document.getElementById("inputHari").value;
+            var jadwalBelajar = document.getElementById("jadwalBelajar");
+            var jadwal = tentukanJadwalBelajar(inputHari);
+            
+            jadwalBelajar.textContent = "Jadwal belajar hari ini: " + jadwal;
+        }
+    </script></script>
+    </div>
+    <div>
+        <h1>WHILE DAN DO WHILE</h1>
+        <script>// Fungsi untuk menampilkan jadwal belajar menggunakan while
+            function tampilkanJadwalBelajarWhile() {
+              var hariBelajar = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
+              var mataPelajaran = ["Matematika", "Bahasa Inggris", "Sains", "Sejarah", "Bahasa Indonesia"];
+              var jadwal = "";
+              var i = 0;
+            
+              while (i < hariBelajar.length) {
+                jadwal += hariBelajar[i] + ": " + mataPelajaran[i] + "<br>";
+                i++;
+              }
+            
+              return jadwal;
+            }
+            
+            // Fungsi untuk menampilkan jadwal belajar menggunakan do-while
+            function tampilkanJadwalBelajarDoWhile() {
+              var hariBelajar = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"];
+              var mataPelajaran = ["Matematika", "Bahasa Inggris", "Sains", "Sejarah", "Bahasa Indonesia"];
+              var jadwal = "";
+              var i = 0;
+            
+              do {
+                jadwal += hariBelajar[i] + ": " + mataPelajaran[i] + "<br>";
+                i++;
+              } while (i < hariBelajar.length);
+            
+              return jadwal;
+            }
+            
+            // Memanggil fungsi dan menampilkan hasilnya
+            document.write("<h1>Jadwal Belajar Menggunakan While</h1>");
+            document.write("<p>" + tampilkanJadwalBelajarWhile() + "</p>");
+            
+            document.write("<h1>Jadwal Belajar Menggunakan Do-While</h1>");
+            document.write("<p>" + tampilkanJadwalBelajarDoWhile() + "</p>");
+            </script>
+    </div>
+    <div>
+        <h1>FUNCTION</h1>
+        <script>// Fungsi untuk menampilkan jadwal belajar
+            function tampilkanJadwalBelajar() {
+              var jadwal = {
+                Senin: "Matematika",
+                Selasa: "Bahasa Inggris",
+                Rabu: "Sains",
+                Kamis: "Sejarah",
+                Jumat: "Bahasa Indonesia"
+              };
+            
+              return jadwal;
+            }
+            
+            // Memanggil fungsi dan menampilkan hasilnya
+            var jadwalBelajar = tampilkanJadwalBelajar();
+            console.log("Jadwal Belajar:");
+            
+            for (var hari in jadwalBelajar) {
+              console.log(hari + ": " + jadwalBelajar[hari]);
+            }
+            </script>
+    </div>
+  </body>
+</html>
